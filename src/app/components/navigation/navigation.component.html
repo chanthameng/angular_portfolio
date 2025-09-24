@@ -1,0 +1,68 @@
+<nav class="navigation" [class.scrolled]="isScrolled">
+  <div class="container">
+    <div class="nav-content">
+      <!-- Logo/Brand -->
+      <div class="nav-brand">
+        <a href="#home" (click)="scrollToSection('home', $event)">
+          <span class="brand-text">Portfolio</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" [class.mobile-open]="mobileMenuOpen">
+        <li class="nav-item">
+          <a href="#home" (click)="scrollToSection('home', $event)" [class.active]="activeSection === 'home'">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" (click)="scrollToSection('about', $event)" [class.active]="activeSection === 'about'">
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" (click)="scrollToSection('projects', $event)" [class.active]="activeSection === 'projects'">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" (click)="scrollToSection('contact', $event)" [class.active]="activeSection === 'contact'">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <!-- Theme Toggle and Mobile Menu Button -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button 
+          class="theme-toggle" 
+          (click)="toggleTheme()"
+          [attr.aria-label]="'Switch to ' + (themeService.getCurrentTheme() === 'light' ? 'dark' : 'light') + ' theme'"
+        >
+          <svg *ngIf="themeService.getCurrentTheme() === 'light'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg *ngIf="themeService.getCurrentTheme() === 'dark'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button 
+          class="mobile-menu-toggle" 
+          (click)="toggleMobileMenu()"
+          [attr.aria-expanded]="mobileMenuOpen"
+          aria-label="Toggle mobile menu"
+        >
+          <span class="hamburger" [class.active]="mobileMenuOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

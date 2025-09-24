@@ -1,0 +1,211 @@
+.project-card {
+  background-color: var(--background-primary);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+
+  &:hover {
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+
+    .card-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .image-placeholder svg {
+      transform: scale(1.05);
+    }
+  }
+
+  &.featured {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+
+    .featured-badge {
+      background-color: var(--accent-color);
+      color: white;
+    }
+  }
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-secondary);
+
+    svg {
+      transition: transform var(--transition-normal);
+    }
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+  }
+
+  .card-actions {
+    display: flex;
+    gap: var(--spacing-md);
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--background-primary);
+      color: var(--text-primary);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      border: 2px solid var(--border-color);
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+        transform: scale(1.1);
+      }
+
+      svg {
+        transition: transform var(--transition-fast);
+      }
+
+      &:hover svg {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.card-content {
+  padding: var(--spacing-xl);
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .card-title {
+    color: var(--text-primary);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+  }
+
+  .featured-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .card-description {
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    margin-top: 0;
+  }
+
+  .card-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+
+    .tech-tag {
+      background-color: var(--background-secondary);
+      color: var(--text-primary);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: var(--radius-md);
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+      transition: all var(--transition-fast);
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .card-content {
+    padding: var(--spacing-lg);
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-sm);
+    }
+
+    .card-title {
+      font-size: var(--font-size-lg);
+    }
+
+    .card-description {
+      font-size: var(--font-size-sm);
+    }
+
+    .card-technologies {
+      .tech-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-content {
+    padding: var(--spacing-md);
+
+    .card-title {
+      font-size: var(--font-size-base);
+    }
+  }
+
+  .card-image {
+    height: 160px;
+  }
+}

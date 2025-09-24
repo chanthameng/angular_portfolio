@@ -1,0 +1,60 @@
+<div class="projects-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>My Projects</h2>
+      <p>Here are some of my recent projects that showcase my skills and experience</p>
+    </div>
+
+    <!-- Project Filter -->
+    <div class="project-filter fade-in">
+      <button 
+        class="filter-btn" 
+        [class.active]="selectedFilter === 'all'"
+        (click)="filterProjects('all')"
+      >
+        All Projects
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="selectedFilter === 'frontend'"
+        (click)="filterProjects('frontend')"
+      >
+        Frontend
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="selectedFilter === 'fullstack'"
+        (click)="filterProjects('fullstack')"
+      >
+        Full Stack
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="selectedFilter === 'mobile'"
+        (click)="filterProjects('mobile')"
+      >
+        Mobile
+      </button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+      <app-card 
+        *ngFor="let project of filteredProjects; trackBy: trackByProjectId"
+        [project]="project"
+        class="project-card slide-up"
+      ></app-card>
+    </div>
+
+    <!-- View More Button -->
+    <div class="view-more fade-in" *ngIf="hasMoreProjects">
+      <app-button 
+        [variant]="'outline'" 
+        [size]="'large'"
+        (click)="loadMoreProjects()"
+      >
+        View More Projects
+      </app-button>
+    </div>
+  </div>
+</div>

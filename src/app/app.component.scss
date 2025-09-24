@@ -1,0 +1,64 @@
+.app-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  padding-top: 80px; // Account for fixed navigation
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  z-index: 1000;
+
+  &:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  svg {
+    transition: transform var(--transition-fast);
+  }
+
+  &:hover svg {
+    transform: translateY(-2px);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px;
+  }
+  
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+}

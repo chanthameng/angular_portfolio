@@ -1,0 +1,40 @@
+<!-- Portfolio Application Layout -->
+<div class="app-container">
+  <!-- Navigation Component -->
+  <app-navigation></app-navigation>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Home/Hero Section -->
+    <section id="home" class="section">
+      <app-home></app-home>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+      <app-about></app-about>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <app-projects></app-projects>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <app-contact></app-contact>
+    </section>
+  </main>
+  
+  <!-- Scroll to Top Button -->
+  <button 
+    class="scroll-to-top" 
+    (click)="scrollToTop()"
+    [class.visible]="showScrollToTop"
+    aria-label="Scroll to top"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+</div>
