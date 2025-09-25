@@ -5,21 +5,21 @@
 .contact-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: var(--spacing-4xl);
+  gap: var(--spacing-2xl); // Reduced gap for more compact layout
   align-items: start;
 }
 
 .contact-form {
   .form {
     background-color: var(--background-primary);
-    padding: var(--spacing-3xl);
+    padding: var(--spacing-2xl); // Reduced padding for more compact layout
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
   }
 
   .form-group {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg); // Reduced margin for more compact layout
 
     label {
       display: block;
@@ -59,7 +59,7 @@
   }
 
   .form-actions {
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-lg); // Reduced margin for more compact layout
     text-align: center;
   }
 
@@ -87,7 +87,7 @@
 .contact-info {
   .info-card {
     background-color: var(--background-primary);
-    padding: var(--spacing-3xl);
+    padding: var(--spacing-2xl); // Reduced padding for more compact layout
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
@@ -96,25 +96,25 @@
 
     h3 {
       color: var(--text-primary);
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-md); // Reduced margin for more compact layout
       font-size: var(--font-size-2xl);
     }
 
     > p {
       color: var(--text-secondary);
-      margin-bottom: var(--spacing-2xl);
+      margin-bottom: var(--spacing-lg); // Reduced margin for more compact layout
       line-height: 1.6;
     }
   }
 
   .contact-methods {
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-lg); // Reduced margin for more compact layout
 
     .contact-method {
       display: flex;
       align-items: center;
       gap: var(--spacing-lg);
-      padding: var(--spacing-lg) 0;
+      padding: var(--spacing-md) 0; // Reduced padding for more compact layout
       border-bottom: 1px solid var(--border-color);
 
       &:last-child {
@@ -163,7 +163,7 @@
   .social-links {
     h4 {
       color: var(--text-primary);
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-md); // Reduced margin for more compact layout
       font-size: var(--font-size-lg);
     }
 
@@ -207,7 +207,7 @@
 @media (max-width: 1024px) {
   .contact-content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-3xl);
+    gap: var(--spacing-xl); // Reduced gap for tablet
   }
 
   .contact-info .info-card {
@@ -217,15 +217,15 @@
 
 @media (max-width: 768px) {
   .contact-content {
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-lg); // Reduced gap for mobile
   }
 
   .contact-form .form {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg); // Reduced padding for mobile
   }
 
   .contact-info .info-card {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg); // Reduced padding for mobile
   }
 
   .contact-info {
@@ -251,11 +251,11 @@
 
 @media (max-width: 480px) {
   .contact-form .form {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md); // Reduced padding for small screens
   }
 
   .contact-info .info-card {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md); // Reduced padding for small screens
   }
 
   .contact-info {

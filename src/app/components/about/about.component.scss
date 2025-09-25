@@ -5,24 +5,24 @@
 .about-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: var(--spacing-4xl);
+  gap: var(--spacing-2xl); // Reduced gap for more compact layout
   align-items: start;
 }
 
 .about-text {
   .bio {
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-2xl); // Reduced margin for more compact layout
 
     h3 {
       color: var(--text-primary);
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-md); // Reduced margin for more compact layout
       font-size: var(--font-size-2xl);
     }
 
     p {
       font-size: var(--font-size-lg);
       line-height: 1.7;
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-md); // Reduced margin for more compact layout
       color: var(--text-secondary);
     }
   }
@@ -30,7 +30,7 @@
   .values {
     h3 {
       color: var(--text-primary);
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-md); // Reduced margin for more compact layout
       font-size: var(--font-size-2xl);
     }
 
@@ -43,7 +43,7 @@
         display: flex;
         align-items: center;
         gap: var(--spacing-md);
-        padding: var(--spacing-md) 0;
+        padding: var(--spacing-sm) 0; // Reduced padding for more compact layout
         color: var(--text-secondary);
         font-size: var(--font-size-lg);
         border-bottom: 1px solid var(--border-color);
@@ -62,23 +62,23 @@
 }
 
 .skills-section {
-  margin-top: var(--spacing-3xl);
+  margin-top: var(--spacing-2xl); // Reduced margin for more compact layout
 
   h3 {
     color: var(--text-primary);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg); // Reduced margin for more compact layout
     font-size: var(--font-size-2xl);
     text-align: center;
   }
 
   .skills-grid {
     display: grid;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg); // Reduced gap for more compact layout
   }
 
   .skill-category {
     background-color: var(--background-primary);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg); // Reduced padding for more compact layout
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-color);
     transition: all var(--transition-normal);
@@ -91,7 +91,7 @@
 
     h4 {
       color: var(--text-primary);
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-md); // Reduced margin for more compact layout
       font-size: var(--font-size-lg);
       text-align: center;
     }
@@ -132,7 +132,7 @@
   text-align: center;
 
   .profile-image {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg); // Reduced margin for more compact layout
 
     .image-placeholder {
       width: 200px;
@@ -202,7 +202,7 @@
 @media (max-width: 1024px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-3xl);
+    gap: var(--spacing-xl); // Reduced gap for tablet
   }
 
   .profile-section {
@@ -213,7 +213,7 @@
 
 @media (max-width: 768px) {
   .about-content {
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-lg); // Reduced gap for mobile
   }
 
   .about-text {
@@ -234,14 +234,14 @@
   }
 
   .skills-section {
-    margin-top: var(--spacing-2xl);
+    margin-top: var(--spacing-lg); // Reduced margin for mobile
 
     h3 {
       font-size: var(--font-size-xl);
     }
 
     .skill-category {
-      padding: var(--spacing-lg);
+      padding: var(--spacing-md); // Reduced padding for mobile
 
       h4 {
         font-size: var(--font-size-base);

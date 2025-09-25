@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--spacing-2xl); // Reduced margin for more compact layout
   flex-wrap: wrap;
 
   .filter-btn {
@@ -44,8 +44,8 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-3xl);
+  gap: var(--spacing-lg); // Reduced gap for more compact layout
+  margin-bottom: var(--spacing-2xl); // Reduced margin for more compact layout
 }
 
 .project-card {
@@ -58,14 +58,14 @@
 
 .view-more {
   text-align: center;
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-lg); // Reduced margin for more compact layout
 }
 
 // Responsive Design
 @media (max-width: 768px) {
   .project-filter {
     gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-lg); // Reduced margin for mobile
 
     .filter-btn {
       padding: var(--spacing-xs) var(--spacing-md);
@@ -75,8 +75,8 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-2xl);
+    gap: var(--spacing-md); // Reduced gap for mobile
+    margin-bottom: var(--spacing-lg); // Reduced margin for mobile
   }
 }
 

@@ -5,6 +5,7 @@
   background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%);
   position: relative;
   overflow: hidden;
+  padding: 60px 0 40px 0; // Reduced top padding, added bottom padding for better balance
 
   // Background decoration
   &::before {
@@ -35,10 +36,11 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-4xl);
+  gap: var(--spacing-2xl); // Further reduced gap for more compact layout
   align-items: center;
   position: relative;
   z-index: 1;
+  padding: var(--spacing-lg) 0; // Reduced vertical padding for tighter spacing
 }
 
 .hero-text {
@@ -48,7 +50,7 @@
     font-size: var(--font-size-6xl);
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm); // Further reduced margin for more compact layout
     color: var(--text-primary);
 
     .highlight {
@@ -64,14 +66,14 @@
     font-size: var(--font-size-2xl);
     font-weight: 600;
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm); // Further reduced margin for more compact layout
   }
 
   .hero-description {
     font-size: var(--font-size-lg);
     line-height: 1.7;
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-lg); // Further reduced margin for more compact layout
     max-width: 500px;
   }
 }
@@ -79,7 +81,7 @@
 .hero-actions {
   display: flex;
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-lg); // Further reduced margin for more compact layout
   flex-wrap: wrap;
 }
 
@@ -159,10 +161,15 @@
 
 // Responsive Design
 @media (max-width: 1024px) {
+  .home-section {
+    padding: 50px 0 30px 0; // Reduced padding for tablet
+  }
+  
   .hero-content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-3xl);
+    gap: var(--spacing-xl); // Further reduced gap for tablet view
     text-align: center;
+    padding: var(--spacing-md) 0; // Reduced padding for tablet
   }
 
   .hero-text {
@@ -176,12 +183,13 @@
 
 @media (max-width: 768px) {
   .home-section {
-    min-height: 90vh;
-    padding: var(--spacing-2xl) 0;
+    min-height: 100vh; // Keep full height for better centering
+    padding: 40px 0 20px 0; // Reduced padding for mobile
   }
 
   .hero-content {
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-lg); // Further reduced gap for mobile
+    padding: var(--spacing-sm) 0; // Reduced padding for mobile
   }
 
   .hero-text {
@@ -201,6 +209,7 @@
   .hero-actions {
     justify-content: center;
     gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md); // Further reduced margin for mobile
   }
 
   .hero-social {
@@ -226,19 +235,34 @@
 }
 
 @media (max-width: 480px) {
+  .home-section {
+    padding: 30px 0 15px 0; // Reduced padding for small screens
+  }
+  
+  .hero-content {
+    padding: var(--spacing-xs) 0; // Minimal padding for small screens
+  }
+  
   .hero-text {
     .hero-title {
       font-size: var(--font-size-3xl);
+      margin-bottom: var(--spacing-sm); // Further reduced margin
     }
 
     .hero-subtitle {
       font-size: var(--font-size-lg);
+      margin-bottom: var(--spacing-sm); // Further reduced margin
+    }
+    
+    .hero-description {
+      margin-bottom: var(--spacing-lg); // Reduced margin for small screens
     }
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: center;
+    margin-bottom: var(--spacing-sm); // Further reduced margin for small screens
   }
 
   .hero-image {

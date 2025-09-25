@@ -155,12 +155,12 @@ a {
 }
 
 .section {
-  padding: var(--spacing-4xl) 0;
+  padding: var(--spacing-2xl) 0; // Reduced padding for better vertical balance
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--spacing-2xl); // Reduced margin for more compact layout
   
   h2 {
     margin-bottom: var(--spacing-sm);
@@ -269,7 +269,7 @@ a {
   }
   
   .section {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl) 0; // Reduced padding for mobile
   }
 }
 
@@ -278,6 +278,14 @@ a {
     --font-size-5xl: 2rem;
     --font-size-4xl: 1.75rem;
     --font-size-3xl: 1.25rem;
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0; // Further reduced padding for small screens
+  }
+  
+  .section-title {
+    margin-bottom: var(--spacing-lg); // Reduced margin for small screens
   }
 }
 
